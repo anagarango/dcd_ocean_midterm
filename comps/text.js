@@ -32,6 +32,7 @@ class TheText extends HTMLElement {
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("content");
         this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
         this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
+        this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("weight");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
