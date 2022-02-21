@@ -8,6 +8,7 @@ p{
     width: 250px;
     font-size: 16px;
     color: white;
+    text-align: center;
 }
 </style>
 
@@ -33,6 +34,7 @@ class TheText extends HTMLElement {
         this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
         this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
         this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("weight");
+        this.shadowRoot.querySelector("p").style.textAlign = this.getAttribute("alignment");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
