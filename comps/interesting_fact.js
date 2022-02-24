@@ -38,6 +38,8 @@ class InterestingFact extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_interestingfact.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".fun_fact_question").style.marginTop = this.getAttribute("top");
+        this.shadowRoot.querySelector(".fun_fact_question").style.marginLeft = this.getAttribute("left");
         this.shadowRoot.querySelector(".head_text").innerText = this.getAttribute("head_text");
     }
 

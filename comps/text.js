@@ -9,6 +9,7 @@ p{
     font-size: 16px;
     color: white;
     text-align: center;
+    font-weight: normal;
 }
 </style>
 
@@ -33,8 +34,12 @@ class TheText extends HTMLElement {
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("content");
         this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
         this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
-        this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("weight");
+        this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("font-weight");
+        this.shadowRoot.querySelector("p").style.fontSize = this.getAttribute("font-size");
         this.shadowRoot.querySelector("p").style.textAlign = this.getAttribute("alignment");
+        this.shadowRoot.querySelector("p").style.position = this.getAttribute("position");
+        this.shadowRoot.querySelector("p").style.marginTop = this.getAttribute("top");
+        this.shadowRoot.querySelector("p").style.marginLeft = this.getAttribute("left");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

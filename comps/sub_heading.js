@@ -5,7 +5,7 @@ var template_subhead = document.createElement("template"); //<template> </templa
 template_subhead.innerHTML = `
 <style>
     p{
-        height: 100px;
+        height: fit-content;
         width: 300px; 
         color: white;
         font-size: 20px;
@@ -29,7 +29,11 @@ class SubHead extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_subhead.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector("p").innerText = this.getAttribute("head_text")
+        this.shadowRoot.querySelector("p").style.marginTop = this.getAttribute("top");
+        this.shadowRoot.querySelector("p").style.marginLeft = this.getAttribute("left");
+        this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
+        this.shadowRoot.querySelector("p").innerText = this.getAttribute("head_text");
+        this.shadowRoot.querySelector("p").style.textAlign = this.getAttribute("alignment");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

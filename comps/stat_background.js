@@ -34,7 +34,7 @@ template_statbackground.innerHTML = `
         color: white;
         font-size: 16px;
         text-align: center;
-        margin:15px 20px 0px 20px
+        margin:15px 20px 0px 20px;
     }
 </style>
 
@@ -62,6 +62,8 @@ class StatBackground extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_statbackground.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector(".stat_background").style.marginTop = this.getAttribute("top");
+        this.shadowRoot.querySelector(".stat_background").style.marginLeft = this.getAttribute("left");
         this.shadowRoot.querySelector(".stat_option").innerText = this.getAttribute("info_text");
         this.shadowRoot.querySelector(".stat_option2").innerText = this.getAttribute("info_text2");
         this.shadowRoot.querySelector(".stat_option3").innerText = this.getAttribute("info_text3");
