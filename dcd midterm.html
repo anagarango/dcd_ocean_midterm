@@ -9,12 +9,36 @@
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
         html {
             font-family: 'Ubuntu', sans-serif;
-            background-color: cadetblue;
+            
         }
         .ana_section {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            flex-direction: column;
+        }
+
+        .background{
+            /* display: flex;
+            align-items: center; */
+            position:absolute;
+            margin: -10px -10px 0 -10px;
+            /* left: 500px; */
+            z-index: -1;
+            /* width: 375px;
+            height: 6748px; */
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: fit-content;
+            /* background-image: url(imgs/background.png) no; */
+
+        }
+        .smoke{
+            position:relative;
+            top: 180px;
+            right: 95px;
         }
         
     </style>
@@ -27,6 +51,12 @@
     <script src="comps/floating_fish.js"></script>
 </head>
 <body>
+    <div>
+        <img src="imgs/background_3.png" width="500vw" height="" class="background">
+    </div>
+    <div class=smoke>
+        <img src="imgs/smoke.gif" class="smoke" alt="smoke_animation">
+    </div>
     <div class="ana_section">
         <sub-heading head_text="Damaged Coral Reef Habitats" width="150px" alignment="end" left="180px"></sub-heading>
         <the-text content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "start" width="290px" left="100px" top="60px"></the-text>
@@ -42,5 +72,6 @@
     <the-heading-text head-text = "What Is Ocean Acidification?" color = "white" shadow = "none" font-size = "36px"></the-heading-text>
     <the-swimming-fish image = "./imgs/fish-water-png-3925.png" width = "300px"></the-swimming-fish>
     <the-floating-fish image = "./imgs/fish-png-26357.png" width = "200px"></the-floating-fish>
+    
 </body>
 </html>
