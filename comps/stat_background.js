@@ -62,8 +62,9 @@ class StatBackground extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_statbackground.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector(".stat_background").style.marginTop = this.getAttribute("top");
-        this.shadowRoot.querySelector(".stat_background").style.marginLeft = this.getAttribute("left");
+        document.querySelector("stat-background").style.position="relative";
+        document.querySelector("stat-background").style.top = this.getAttribute("top");
+        document.querySelector("stat-background").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector(".stat_option").innerText = this.getAttribute("info_text");
         this.shadowRoot.querySelector(".stat_option2").innerText = this.getAttribute("info_text2");
         this.shadowRoot.querySelector(".stat_option3").innerText = this.getAttribute("info_text3");
@@ -80,14 +81,17 @@ class StatBackground extends HTMLElement {
         this.shadowRoot.querySelector(".stat_option").style.cssText = `
             background-color:${bgcolor1};
             border-color:${bgcolor1};
+            transition: 1s
         `;
         this.shadowRoot.querySelector(".stat_option2").style.cssText = `
             background-color:${bgcolor2};
             border-color:${bgcolor2};
+            transition: 1s
         `;
         this.shadowRoot.querySelector(".stat_option3").style.cssText = `
             background-color:${bgcolor3};
             border-color:${bgcolor3};
+            transition: 1s
         `;
         
         // this.shadowRoot.querySelector(".stat_option2").style.backgroundColor="green";

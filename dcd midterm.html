@@ -13,6 +13,8 @@
         }
         .ana_section {
             display: flex;
+            position: relative;
+            top: 4100px;
             align-items: center;
             flex-direction: column;
         }
@@ -49,6 +51,7 @@
     <script src="comps/heading_text.js"></script>
     <script src="comps/swimming_fish.js"></script>
     <script src="comps/floating_fish.js"></script>
+    <script src="comps/appear.js"></script>
 </head>
 <body>
     <div>
@@ -58,15 +61,16 @@
         <img src="imgs/smoke.gif" class="smoke" alt="smoke_animation">
     </div>
     <div class="ana_section">
-        <sub-heading head_text="Damaged Coral Reef Habitats" width="150px" alignment="end" left="180px"></sub-heading>
-        <the-text content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "start" width="290px" left="100px" top="60px"></the-text>
-        <the-text content = "The resurgence of high acidic ocean water has: " alignment = "start" width="340px" top="60px" left="-15px"></the-text>
-        <the-text content = " - boosted the process of coral bleaching" alignment = "start" width="340px" top="-7px" left="50px"></the-text>
-        <the-text content = " - affected the rapid growth coral needs to protect itself" alignment = "start" width="340px" top="-11px" left="50px"></the-text>
-        <the-text content = "But what does this bleaching look like?" width = "320px" top = "60px"></the-text>
-        <the-text content = "Click on the coral to see!" color = "#DFB707" top = "-14px" font-weight = "bolder" font-size = "18px"></the-text>
-        <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="500px"></stat-background>
-        <interesting-fact head_text="Why are Coral Reefs Important?" top="100px"></interesting-fact>
+        <sub-heading head_text="Damaged Coral Reef Habitats" width="200px" alignment="end" left="250px"></sub-heading>
+        <the-text content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "end" width="290px" left="80px" top="150px"></the-text>
+        <the-text content = "The resurgence of high acidic ocean water has: " alignment = "start" width="340px" top="230px" left="-40px"></the-text>
+        <the-text content = " - boosted the process of coral bleaching" alignment = "start" width="340px" top="220px" left="-20px"></the-text>
+        <the-text content = " - affected the rapid growth coral needs to protect itself" alignment = "start" width="340px" top="200px" left="-20px"></the-text>
+        <the-text content = "But what does this bleaching look like?" width = "320px" top = "260px"></the-text>
+        <the-text content = "Click on the coral to see!" color = "#DFB707" top = "230px" font-weight = "bolder" font-size = "18px"></the-text>
+        <appear-div img = "imgs/deadcoral.png" top = "330px" left = "-150px"></appear-div>
+        <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="600px"></stat-background>
+        <interesting-fact head_text="Why are Coral Reefs Important?" top="700px"></interesting-fact>
     </div>
     <the-text content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." color = "#DFB707" width = "300px" weight = "bold" alignment = "left"></the-text>
     <the-heading-text head-text = "What Is Ocean Acidification?" color = "white" shadow = "none" font-size = "36px"></the-heading-text>
