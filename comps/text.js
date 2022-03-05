@@ -31,7 +31,7 @@ class TheText extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_text.content.cloneNode(true)); //use the template to make a clone
-        document.querySelector("the-text").style.position="absolute";
+        document.querySelector("the-text").style.position = "absolute";
         this.shadowRoot.querySelector("p").style.top = this.getAttribute("top");
         this.shadowRoot.querySelector("p").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("content");
@@ -40,15 +40,62 @@ class TheText extends HTMLElement {
         this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("font-weight");
         this.shadowRoot.querySelector("p").style.fontSize = this.getAttribute("font-size");
         this.shadowRoot.querySelector("p").style.textAlign = this.getAttribute("alignment");
-        document.querySelector("body").onscroll = (e) => console.log(e.target.body.scrollTop);
-        this.HandleContScroll(e.target.scrollTop);
+        document.querySelector("body").onscroll = (e) => this.HandleContScroll(e.target.documentElement.scrollTop)
+    }
+
+    opacityOff(){
+        this.shadowRoot.querySelector("p").style.cssText += `
+            opacity: 0;
+            transition: 1s
+            `
+    }
+    opacityOn(){
+        this.shadowRoot.querySelector("p").style.cssText += `
+            opacity: 1;
+            transition: 1s
+            `
     }
     HandleContScroll(scrollNum=0){
         console.log("scroll", scrollNum);
-        if(scrollNum === 0){
-           document.querySelector(".ana_section").style.cssText = `
-                display: none
-           `
+        if(scrollNum < 3400){
+            document.querySelector(".whale_shark").lefty()
+        } else {
+             document.querySelector(".whale_shark").righty()
+        }
+        if(scrollNum < 4000){
+            document.querySelector(".ana_subheading").opacityOff()
+         } else {
+             document.querySelector(".ana_subheading").opacityOn()
+         }
+        if(scrollNum < 4200){
+           document.querySelector(".ana_text1").opacityOff()
+        } else {
+            document.querySelector(".ana_text1").opacityOn()
+        }
+        if(scrollNum < 4300){
+            document.querySelector(".ana_text2").opacityOff()
+         } else {
+             document.querySelector(".ana_text2").opacityOn()
+        }
+        if(scrollNum < 4350){
+            document.querySelector(".ana_text3").opacityOff()
+         } else {
+             document.querySelector(".ana_text3").opacityOn()
+        }
+        if(scrollNum < 4400){
+            document.querySelector(".ana_text4").opacityOff()
+         } else {
+             document.querySelector(".ana_text4").opacityOn()
+        }
+        if(scrollNum < 4550){
+            document.querySelector(".ana_text5").opacityOff()
+         } else {
+             document.querySelector(".ana_text5").opacityOn()
+        }
+        if(scrollNum < 4650){
+            document.querySelector(".ana_text6").opacityOff()
+         } else {
+             document.querySelector(".ana_text6").opacityOn()
         }
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!

@@ -54,7 +54,6 @@ class TheAppear extends HTMLElement {
             transition: 1s;
         `;
     }
-
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 

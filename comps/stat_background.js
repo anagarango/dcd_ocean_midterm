@@ -69,7 +69,7 @@ class StatBackground extends HTMLElement {
         this.shadowRoot.querySelector(".stat_option2").innerText = this.getAttribute("info_text2");
         this.shadowRoot.querySelector(".stat_option3").innerText = this.getAttribute("info_text3");
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("head_text");
-        this.shadowRoot.querySelector('div').onclick = () => this.statAnswer(
+        this.shadowRoot.querySelector('.stat_options').onclick = () => this.statAnswer(
             this.getAttribute('bg1'),
             this.getAttribute('bg2'),
             this.getAttribute('bg3')
@@ -93,9 +93,6 @@ class StatBackground extends HTMLElement {
             border-color:${bgcolor3};
             transition: 1s
         `;
-        
-        // this.shadowRoot.querySelector(".stat_option2").style.backgroundColor="green";
-        // this.shadowRoot.querySelector(".stat_option3").style.backgroundColor="red";
     }
 }
 

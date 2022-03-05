@@ -11,12 +11,14 @@
             font-family: 'Ubuntu', sans-serif;
             
         }
+        
         .ana_section {
             display: flex;
             position: relative;
             top: 4100px;
             align-items: center;
             flex-direction: column;
+            /* width: fit-content; */
         }
 
         .background{
@@ -33,8 +35,9 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            overflow-x: hidden;
             width: fit-content;
-            /* background-image: url(imgs/background.png) no; */
+            /* background-image: url(imgs/background.png) */
 
         }
         .smoke{
@@ -60,22 +63,22 @@
     <div class=smoke>
         <img src="imgs/smoke.gif" class="smoke" alt="smoke_animation">
     </div>
+    <the-swimming-fish class = "whale_shark" image = "imgs/whale_shark.png" width = "280px" blendmode="soft-light" leftstart="-400px" leftend="200px"></the-swimming-fish>
     <div class="ana_section">
-        <sub-heading head_text="Damaged Coral Reef Habitats" width="200px" alignment="end" left="250px"></sub-heading>
-        <the-text content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "end" width="290px" left="80px" top="150px"></the-text>
-        <the-text content = "The resurgence of high acidic ocean water has: " alignment = "start" width="340px" top="230px" left="-40px"></the-text>
-        <the-text content = " - boosted the process of coral bleaching" alignment = "start" width="340px" top="220px" left="-20px"></the-text>
-        <the-text content = " - affected the rapid growth coral needs to protect itself" alignment = "start" width="340px" top="200px" left="-20px"></the-text>
-        <the-text content = "But what does this bleaching look like?" width = "320px" top = "260px"></the-text>
-        <the-text content = "Click on the coral to see!" color = "#DFB707" top = "230px" font-weight = "bolder" font-size = "18px"></the-text>
-        <appear-div img = "imgs/deadcoral.png" top = "330px" left = "-150px"></appear-div>
+        <sub-heading class="ana_subheading" head_text="Damaged Coral Reef Habitats" width="200px" alignment="end" left="130px"></sub-heading>
+        <the-text class="ana_text1"content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "end" width="290px" left="80px" top="150px"></the-text>
+        <the-text class="ana_text2" content = "The resurgence of high acidic ocean water has: " alignment = "start" width="340px" top="230px" left="-40px"></the-text>
+        <the-text class="ana_text3"content = " - boosted the process of coral bleaching" alignment = "start" width="340px" top="220px" left="-20px"></the-text>
+        <the-text class="ana_text4"content = " - affected the rapid growth coral needs to protect itself" alignment = "start" width="340px" top="200px" left="-20px"></the-text>
+        <the-text class="ana_text5"content = "But what does this bleaching look like?" width = "320px" top = "260px"></the-text>
+        <the-text class="ana_text6"content = "Click on the coral to see!" color = "#DFB707" top = "230px" font-weight = "bolder" font-size = "18px"></the-text>
+        <appear-div img = "imgs/deadcoral.png" top = "325px" left = "-150px"></appear-div>
         <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="600px"></stat-background>
-        <interesting-fact head_text="Why are Coral Reefs Important?" top="700px"></interesting-fact>
+        <interesting-fact head_text="Why are Coral Reefs Important?" top="800px"></interesting-fact>
     </div>
     <the-text content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." color = "#DFB707" width = "300px" weight = "bold" alignment = "left"></the-text>
     <the-heading-text head-text = "What Is Ocean Acidification?" color = "white" shadow = "none" font-size = "36px"></the-heading-text>
-    <the-swimming-fish image = "./imgs/fish-water-png-3925.png" width = "300px"></the-swimming-fish>
-    <the-floating-fish image = "./imgs/fish-png-26357.png" width = "200px"></the-floating-fish>
-    
+    <the-swimming-fish image = "imgs/fish-water-png-3925.png" width = "100px"></the-swimming-fish>
+    <the-floating-fish image = "imgs/fish-png-26357.png" width = "200px"></the-floating-fish>
 </body>
 </html>
