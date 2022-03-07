@@ -6,12 +6,14 @@ template_swimfish.innerHTML = `
 <style>
 img{
     width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    mix-blend-mode: normal;
 }
 </style>
 
-<div>
-    <img src = "/Users/renatadzotova/Desktop/dynamic content project/dcd_ocean_midterm/utils/fish-water-png-3925.png"/>
-</div>
+<img src = "imgs/fish-water-png-3925.png"/>
 `;
 
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
@@ -28,14 +30,29 @@ class TheSwimFish extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_swimfish.content.cloneNode(true)); //use the template to make a clone
-
-        if (this.getAttribute("image")) {
-            this.shadowRoot.querySelector("div > img").src = this.getAttribute("image");
-        }
-
-        this.shadowRoot.querySelector("div > img").style.width = this.getAttribute("width");
+        document.querySelector("the-swimming-fish").style.position = "absolute";
+        this.shadowRoot.querySelector("img").src = this.getAttribute("image");
+        this.shadowRoot.querySelector("img").style.width = this.getAttribute("width");
+        this.shadowRoot.querySelector("img").style.top = this.getAttribute("top");
+        this.shadowRoot.querySelector("img").style.left = this.getAttribute("left");
+        this.shadowRoot.querySelector("img").style.mixBlendMode = this.getAttribute("blendmode");
+        // this.shadowRoot.querySelector("img").style.left = this.lefty(this.getAttribute("toplefty"))
     }
 
+    lefty(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-450px;
+            top: 200px;
+            transition:0s
+            `
+    }
+    righty(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:250px;
+            top: -100px;
+            transition: 18s
+            `
+    }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
