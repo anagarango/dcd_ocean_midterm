@@ -5,13 +5,15 @@ var template_appear = document.createElement("template"); //<template> </templat
 template_appear.innerHTML = `
 <style>
 .appeardiv{
-    width:327px;
+    width:340px;
     height:285px;
     position: relative;
     background-image: url("imgs/deadcoral.png");
     background-size: cover;
     opacity:0;
-    left:0px
+    left:0px;
+    overflow-x:visible;
+    z-index: 1
 
 }
 </style>

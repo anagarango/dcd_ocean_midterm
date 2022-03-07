@@ -41,16 +41,16 @@ class TheSwimFish extends HTMLElement {
 
     lefty(){
         this.shadowRoot.querySelector("img").style.cssText += `
-            left:-280px;
-            top: 3600px;
+            left:-450px;
+            top: 200px;
             transition:0s
             `
     }
     righty(){
         this.shadowRoot.querySelector("img").style.cssText += `
-            left:500px;
-            top: 3350px;
-            transition: 19s
+            left:250px;
+            top: -100px;
+            transition: 18s
             `
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!

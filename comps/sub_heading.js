@@ -10,6 +10,7 @@ template_subhead.innerHTML = `
         color: white;
         font-size: 21px;
         font-weight: bold;
+        margin-top: 200px
     }
 </style>
 <p>Hey There</p>
@@ -31,6 +32,10 @@ class SubHead extends HTMLElement {
         this.shadowRoot.appendChild(template_subhead.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector("p").style.position="relative";
         this.shadowRoot.querySelector("p").style.top = this.getAttribute("top");
+        this.shadowRoot.querySelector("p").style.fontSize = this.getAttribute("font-size");
+        this.shadowRoot.querySelector("p").style.textShadow = this.getAttribute("text-shadow");
+        this.shadowRoot.querySelector("p").style.display = this.getAttribute("display");
+        this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
         this.shadowRoot.querySelector("p").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("head_text");

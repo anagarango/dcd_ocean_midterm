@@ -57,42 +57,42 @@ class TheText extends HTMLElement {
     }
     HandleContScroll(scrollNum=0){
         console.log("scroll", scrollNum);
-        if(scrollNum < 3400){
+        if(scrollNum < 3000){
             document.querySelector(".whale_shark").lefty()
         } else {
              document.querySelector(".whale_shark").righty()
         }
-        if(scrollNum < 4000){
+        if(scrollNum < 3750){
             document.querySelector(".ana_subheading").opacityOff()
          } else {
              document.querySelector(".ana_subheading").opacityOn()
          }
-        if(scrollNum < 4200){
+        if(scrollNum < 3800){
            document.querySelector(".ana_text1").opacityOff()
         } else {
             document.querySelector(".ana_text1").opacityOn()
         }
-        if(scrollNum < 4300){
+        if(scrollNum < 3850){
             document.querySelector(".ana_text2").opacityOff()
          } else {
              document.querySelector(".ana_text2").opacityOn()
         }
-        if(scrollNum < 4350){
+        if(scrollNum < 3900){
             document.querySelector(".ana_text3").opacityOff()
          } else {
              document.querySelector(".ana_text3").opacityOn()
         }
-        if(scrollNum < 4400){
+        if(scrollNum < 4000){
             document.querySelector(".ana_text4").opacityOff()
          } else {
              document.querySelector(".ana_text4").opacityOn()
         }
-        if(scrollNum < 4550){
+        if(scrollNum < 4150){
             document.querySelector(".ana_text5").opacityOff()
          } else {
              document.querySelector(".ana_text5").opacityOn()
         }
-        if(scrollNum < 4650){
+        if(scrollNum < 4200){
             document.querySelector(".ana_text6").opacityOff()
          } else {
              document.querySelector(".ana_text6").opacityOn()
