@@ -53,6 +53,38 @@ class TheSwimFish extends HTMLElement {
             transition: 18s
             `
     }
+    
+    rightysnake(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-500px;
+            top: 1850px;
+            transition: 3s
+            `
+    }
+
+    leftysnake(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-500px;
+            top: 1750px;
+            transition:0s
+            `
+    }
+
+    rightybubble(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-200px;
+            top: 500px;
+            transition: 20s
+            `
+    }
+
+    leftybubble(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-200px;
+            top: 500px;
+            transition:0s
+            `
+    }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 

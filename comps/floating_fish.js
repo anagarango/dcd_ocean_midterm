@@ -4,8 +4,13 @@ var template_floatfish = document.createElement("template"); //<template> </temp
 //To-do - CREATE THE UI HERE!
 template_floatfish.innerHTML = `
 <style>
+div{
+    position: absolute;
+}
 img{
-    width: 100%;
+    width: 90%;
+    mix-blend-mode: normal;
+}
 }
 </style>
 
@@ -33,7 +38,10 @@ class TheFloatingFish extends HTMLElement {
             this.shadowRoot.querySelector("div > img").src = this.getAttribute("image");
         }
 
+        this.shadowRoot.querySelector("div").style.top = this.getAttribute("top");
+        this.shadowRoot.querySelector("div").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("div > img").style.width = this.getAttribute("width");
+        this.shadowRoot.querySelector("div > img").style.mixBlendMode = this.getAttribute("blendmode");
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

@@ -11,7 +11,8 @@ template_interestingfact.innerHTML = `
     border-radius: 10px;
     color: white;
     text-align: center;
-    padding:10px
+    padding:10px;
+    position: relative;
 }
 p{
     text-decoration: underline;
@@ -38,9 +39,8 @@ class InterestingFact extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_interestingfact.content.cloneNode(true)); //use the template to make a clone
-        document.querySelector("interesting-fact").style.position="relative";
-        document.querySelector("interesting-fact").style.top = this.getAttribute("top");
-        document.querySelector("interesting-fact").style.left = this.getAttribute("left");
+        this.shadowRoot.querySelector(".fun_fact_question").style.top = this.getAttribute("top");
+        this.shadowRoot.querySelector(".fun_fact_question").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector(".head_text").innerText = this.getAttribute("head_text");
     }
 

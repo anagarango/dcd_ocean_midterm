@@ -97,6 +97,59 @@ class TheText extends HTMLElement {
          } else {
              document.querySelector(".ana_text6").opacityOn()
         }
+
+        if(scrollNum < 7400){
+            document.querySelector(".snake").rightysnake()
+        } else {
+            document.querySelector(".snake").leftysnake()
+        }
+
+        if(scrollNum < 5630){
+            document.querySelector(".textOne").opacityOff()
+         } else {
+             document.querySelector(".textOne").opacityOn()
+         }
+         if(scrollNum < 5950){
+            document.querySelector(".textTwo").opacityOff()
+         } else {
+             document.querySelector(".textTwo").opacityOn()
+         }
+         if(scrollNum < 6300){
+            document.querySelector(".textThree").opacityOff()
+         } else {
+             document.querySelector(".textThree").opacityOn()
+         }
+         if(scrollNum < 6630){
+            document.querySelector(".textFour").opacityOff()
+         } else {
+             document.querySelector(".textFour").opacityOn()
+         }
+         if(scrollNum < 7020){
+            document.querySelector(".textFive").opacityOff()
+         } else {
+             document.querySelector(".textFive").opacityOn()
+         }
+         if(scrollNum < 7100){
+            document.querySelector(".textSix").opacityOff()
+         } else {
+             document.querySelector(".textSix").opacityOn()
+         }
+         if(scrollNum < 7400){
+            document.querySelector(".textSeven").opacityOff()
+         } else {
+             document.querySelector(".textSeven").opacityOn()
+         }
+         if(scrollNum < 7500){
+            document.querySelector(".textEight").opacityOff()
+         } else {
+             document.querySelector(".textEight").opacityOn()
+         }
+
+         if(scrollNum < 6150){
+            document.querySelector(".bubble").rightybubble()
+        } else {
+            document.querySelector(".bubble").leftybubble()
+        }
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }

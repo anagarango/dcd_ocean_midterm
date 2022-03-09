@@ -5,6 +5,7 @@ var template_statbackground = document.createElement("template"); //<template> <
 template_statbackground.innerHTML = `
 <style>
     .stat_background{
+        position:relative;
         width: 360px;
         height: fit-content;
         background: rgba(40, 129, 188, 0.28);
@@ -62,10 +63,9 @@ class StatBackground extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_statbackground.content.cloneNode(true)); //use the template to make a clone
-        document.querySelector("stat-background").style.position="relative";
-        document.querySelector("stat-background").style.top = this.getAttribute("top");
         document.querySelector("stat-background").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector(".stat_option").innerText = this.getAttribute("info_text");
+        this.shadowRoot.querySelector(".stat_background").style.top = this.getAttribute("top");
         this.shadowRoot.querySelector(".stat_option2").innerText = this.getAttribute("info_text2");
         this.shadowRoot.querySelector(".stat_option3").innerText = this.getAttribute("info_text3");
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("head_text");

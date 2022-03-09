@@ -49,6 +49,15 @@
             top: -145px;
             right: 95px;
         }
+
+        .renata_section {
+            display: flex;
+            position: relative;
+            top: 2700px;
+            align-items: center;
+            flex-direction: column;
+            
+        }
         
     </style>
     <script src="comps/interesting_fact.js"></script>
@@ -89,33 +98,24 @@
         <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="700px"></stat-background>
         <interesting-fact head_text="Why are Coral Reefs Important?" top="850px"></interesting-fact>
     </div>
-    <the-text content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." color = "#DFB707" width = "300px" weight = "bold" alignment = "left"></the-text>
-    <the-heading-text head-text = "What Is Ocean Acidification?" color = "white" shadow = "none" font-size = "36px"></the-heading-text>
-    <!-- <the-swimming-fish image = "imgs/fish-water-png-3925.png" width = "100px"></the-swimming-fish> -->
-    <the-floating-fish image = "imgs/fish-png-26357.png" width = "200px"></the-floating-fish>
+    <div class = "renata_section">
+        <the-text class = "textOne" content = "Deep Sea Fish In Danger" color = "#FFFFFF" top = "0px" font-weight = "bold" font-size = "37px"></the-text>
+        <the-text class = "textTwo"content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." alignment = "center" width="450px" top="180px" left="0px"></the-text>
+        <the-floating-fish image = "imgs/green_jellyfish.png" width = "150px" top = "400px" left = "250px" blendmode="color-dodge"></the-floating-fish>
+        <the-swimming-fish class = "bubble" image = "imgs/bubble_fish.png" width = "230px" top = "500px" left="40px" blendmode="color-dodge"></the-swimming-fish>
+        <the-text class = "textThree" content = "However, deep sea fish live in a cold dark environment with very little food available." alignment = "end" width="250px" top="480px" left="90px"></the-text>
+        <the-floating-fish image = "imgs/red_jellyfish.png" width = "250px" top = "830px" left = "0px"></the-floating-fish>
+        <the-text class = "textFour" content = "So they have metabolic rates 10 times lower than shallow-water fish! " alignment = "end" width="300px" top="700px" left="60px"></the-text>
+        <the-text class = "textFive" content = "now click on this fish!" alignment = "end" width="200px" top="770px" color = "skyblue"></the-text>
+        <the-swimming-fish image = "imgs/light_fish.png" width = "450px" top = "1050px" left="70px" blendmode="color-dodge"></the-swimming-fish>
+        <the-text class = "textSix" content = "They have less energy available for dealing with environmental stress." alignment = "center" width="200px" top="970px" left="60px"></the-text>
+        <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(255, 19, 19, 0.45)" bg3="rgba(52, 255, 52, 0.45)" head_text="Guess how many years it will take the ocean to fully recover, even if acidification is stopped?" info_text="100" info_text2="10" info_text3="1000+" top="1030px"></stat-background>
+        <the-text class = "textSeven" content = "What does it mean?" color = "yellow" top = "1050px" font-weight = "bold" font-size = "31px" width = "300px"></the-text>
+        <the-text class = "textEight" content = "click to find out!" alignment = "center" width="200px" top="1070px" left="-60px" color = "skyblue"></the-text>
+        <the-swimming-fish image = "imgs/ugly_fish.png" width = "200px" top = "1950px" left="70px" blendmode="color-dodge"></the-swimming-fish>
+        <the-swimming-fish class = "snake" image = "imgs/snake_fish.png" width = "400px" top = "1750px" left = "400px" blendmode="color-dodge"></the-swimming-fish>
+    </div>
+
 </body>
 </html>
 
-<!-- <div>
-    <img src="imgs/back.png" width="500vw" class="background">
-</div>
-<sub-heading head_text="Ocean Acidification" top="-100px" left="100" font-size="45px" alignment="center" color="#5D8ABF" text-shadow="0px 4px 4px rgba(0, 0, 0, 0.25)"></sub-heading>
-<div class = "smoke">
-    <img src="imgs/smoke.gif" class="smoke" alt="smoke_animation">
-</div>
-<appear-div img = "imgs/deadcoral.png" top = "4825px" left = "-73px"></appear-div>
-<div class="ana_section">
-    <the-swimming-fish class = "whale_shark" image = "imgs/whale_shark.png" width = "280px" blendmode="soft-light" leftstart="-400px" leftend="200px"></the-swimming-fish>
-    <sub-heading class="ana_subheading" head_text="Damaged Coral Reef Habitats" width="200px" alignment="end" left="130px"></sub-heading>
-    <the-text class="ana_text1"content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "end" width="290px" left="80px" top="320px"></the-text>
-    <the-text class="ana_text2" content = "The resurgence of high acidic ocean water has: " alignment = "start" width="340px" top="230px" left="-40px"></the-text>
-    <the-text class="ana_text3"content = " - boosted the process of coral bleaching" alignment = "start" width="340px" top="220px" left="-20px"></the-text>
-    <the-text class="ana_text4"content = " - affected the rapid growth coral needs to protect itself" alignment = "start" width="340px" top="200px" left="-20px"></the-text>
-    <the-text class="ana_text5"content = "But what does this bleaching look like?" width = "320px" top = "260px"></the-text>
-    <the-text class="ana_text6"content = "Click on the coral to see!" color = "#DFB707" top = "230px" font-weight = "bolder" font-size = "18px"></the-text>
-    <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="900px"></stat-background>
-    <interesting-fact head_text="Why are Coral Reefs Important?" top="1050px"></interesting-fact>
-</div>
-<the-text content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." color = "#DFB707" width = "300px" weight = "bold" alignment = "left"></the-text>
-<the-heading-text head-text = "What Is Ocean Acidification?" color = "white" shadow = "none" font-size = "36px"></the-heading-text>
-<the-floating-fish image = "imgs/fish-png-26357.png" width = "200px"></the-floating-fish> -->
