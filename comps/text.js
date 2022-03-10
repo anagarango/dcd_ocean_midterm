@@ -11,6 +11,7 @@ p{
     color: white;
     text-align: center;
     font-weight: normal;
+    opacity: 100%;
 }
 </style>
 
@@ -35,6 +36,7 @@ class TheText extends HTMLElement {
         this.shadowRoot.querySelector("p").style.top = this.getAttribute("top");
         this.shadowRoot.querySelector("p").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("content");
+        this.shadowRoot.querySelector("p").style.opacity = this.getAttribute("opacity");
         this.shadowRoot.querySelector("p").style.color = this.getAttribute("color");
         this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
         this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("font-weight");
@@ -98,12 +100,6 @@ class TheText extends HTMLElement {
              document.querySelector(".ana_text6").opacityOn()
         }
 
-        if(scrollNum < 7400){
-            document.querySelector(".snake").rightysnake()
-        } else {
-            document.querySelector(".snake").leftysnake()
-        }
-
         if(scrollNum < 5630){
             document.querySelector(".textOne").opacityOff()
          } else {
@@ -145,11 +141,27 @@ class TheText extends HTMLElement {
              document.querySelector(".textEight").opacityOn()
          }
 
-         if(scrollNum < 6150){
-            document.querySelector(".bubble").rightybubble()
-        } else {
+         if(scrollNum < 5900){
             document.querySelector(".bubble").leftybubble()
+            
+        } else {
+            document.querySelector(".bubble").rightybubble()
         }
+
+        if(scrollNum < 6400){
+            document.querySelector(".ugly").leftyjelly()
+            
+        } else {
+            document.querySelector(".ugly").rightyjelly()
+        }
+    }
+
+    textAppear(){
+        this.shadowRoot.querySelector("p").style.cssText += `
+        opacity: 100%;
+        transition:4s;
+        transition-delay: 2s;
+        `
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
