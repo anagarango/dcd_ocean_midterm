@@ -9,54 +9,65 @@
         @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
         html {
             font-family: 'Ubuntu', sans-serif;
-            padding: 0;
-            
+            display: flex;
+            justify-content: center;
+            background-color: black;
         }
-        
         .ana_section {
             display: flex;
+            width: 500px;
             position: relative;
-            top: 2565px;
+            top: 3100px;
             align-items: center;
             flex-direction: column;
             height: 2100px;
             overflow-x: hidden;
+            padding-top: 320px;
             /* overscroll-behavior-x: hidden; */
-            /* overflow-x: hidden; */
         }
-
         .background{
-            /* display: flex;
-            align-items: center; */
             position:absolute;
-            margin: -10px -10px 0 -10px;
-            /* left: 500px; */
             z-index: -1;
-            /* width: 375px;
-            height: 6748px; */
+            height: 8660px;
         }
         body{
             display: flex;
-            justify-content: center;
             flex-direction: column;
-            overflow-x: clip;
-            width: fit-content;
-            /* background-image: url(imgs/background.png) */
-
+            overflow-x: hidden;
+            margin-top: -450px
         }
         .smoke{
             position:relative;
-            top: -145px;
-            right: 95px;
+            top: 22px;
+            left: -190px;
+            width:315px;
+            z-index:-1
         }
-
         .renata_section {
             display: flex;
             position: relative;
-            top: 2700px;
+            top: 3100px;
+            height: 2160px;
             align-items: center;
             flex-direction: column;
-            
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        .introduction{
+            display: flex;
+            position: relative;
+            top: 400px;
+            height: 500px;
+            align-items: center;
+            flex-direction: column;
+        }
+        .information{
+            display: flex;
+            position: relative;
+            top: 700px;
+            height: 800px;
+            align-items: center;
+            flex-direction: column;
         }
         
     </style>
@@ -68,54 +79,55 @@
     <script src="comps/swimming_fish.js"></script>
     <script src="comps/floating_fish.js"></script>
     <script src="comps/appear.js"></script>
+    <script src="comps/animated_title.js"></script>
 </head>
 <body>
-    <div>
+    <div class="introduction">
         <img src="imgs/background.png" width="500vw" class="background">
-    </div>
-    <sub-heading head_text="Ocean Acidification" top="-50px" left="100px" font-size="45px" alignment="center" color="#5D8ABF" text-shadow="0px 4px 4px rgba(0, 0, 0, 0.25)"></sub-heading>
-    <div class="smoke">
+        <animated-title top="140px" alignment="center" fontsize="75px" margin-between-letters="-3.5px" color="#5D8ABF" width="360px" zIndex="1s"></animated-title>
         <img src="imgs/smoke.gif" class="smoke" alt="smoke_animation">
     </div>
-    <div>
-        <sub-heading head_text="What is Ocean Acidification?" color="white" top="30px" left="100px" font-size="35px" alignment="center"></sub-heading>
-        <the-text content="Ocean acidification is the process of water becoming more acidic as it absorbs carbon dioxide from the atmosphere." width = "350px" top="10px" left="75px"></the-text>
-        <the-text content="Yearly, the ocean absorbs roughly" width = "350px" top="130px" left="75px"></the-text>
-        <the-text content="25%" font-size="30px" width = "350px" font-weight="bolder" top="110px" left="75px"></the-text>
-        <the-text content="of carbon dioxide released by human activities that change ocean significant water properties" width = "350px" top="100px" left="75px"></the-text>
-        <the-text content="Scroll down to see three major issues of Ocean Acidification." font-weight="bolder"color = "#DFB707" width = "300px" top="150px" left="100px" weight = "bold" alignment = "center"></the-text>
+    <div class="information">
+        <sub-heading head_text="What is Ocean Acidification?" color="white" top="50px" font-size="35px" alignment="center"></sub-heading>
+        <the-text class="info_text" content="Ocean acidification is the process of water becoming more acidic as it absorbs carbon dioxide from the atmosphere." width = "350px" top="50px" ></the-text>
+        <the-text class="info_text2" content="Yearly, the ocean absorbs roughly" width = "350px" top="60px"></the-text>
+        <the-text class="info_text3" content="25%" font-size="45px" width = "350px" font-weight="900" top="40px" color = "#DFB707"></the-text>
+        <the-text class="info_text4" content="of carbon dioxide released by human activities that change ocean significant water properties" width = "350px" top="20px" ></the-text>
+        <the-text class="info_text5" content="Scroll down to see three major issues of Ocean Acidification." font-weight="bolder"color = "#DFB707" width = "300px" top="60px" weight = "bold" alignment = "center" margin-bottom="70px"></the-text>
+        <img src="imgs/anchor.gif" width="180px" alt="smoke_animation">
     </div>
-    <appear-div img = "imgs/deadcoral.png" top = "3670px" left = "-75px"></appear-div>
     <div class="ana_section">
-        <the-swimming-fish class = "whale_shark" image = "imgs/whale_shark.png" width = "300px" blendmode="soft-light" leftstart="-400px" leftend="200px"></the-swimming-fish>
+        <the-swimming-fish class = "whale_shark" image = "imgs/whale_shark.png" width = "350px" blendmode="soft-light"></the-swimming-fish>
         <sub-heading class="ana_subheading" head_text="Damaged Coral Reef Habitats" width="200px" alignment="end" left="130px"></sub-heading>
         <the-text class="ana_text1"content = "Coral Reefs, one of the most diverse and vital ecosystems, are being bleached out and destroyed." alignment = "end" width="290px" left="80px" top="20px"></the-text>
         <the-text class="ana_text2" content = "The resurgence of high acidic ocean water has: " alignment = "start" width="340px" top="70px" left="-40px"></the-text>
         <the-text class="ana_text3"content = " - boosted the process of coral bleaching" alignment = "start" width="340px" top="50px" left="-20px"></the-text>
         <the-text class="ana_text4"content = " - affected the rapid growth coral needs to protect itself" alignment = "start" width="340px" top="30px" left="-20px"></the-text>
         <the-text class="ana_text5"content = "But what does this bleaching look like?" width = "320px" top = "80px"></the-text>
-        <the-text class="ana_text6"content = "Click on the coral to see!" color = "#DFB707" top = "50px" font-weight = "bolder" font-size = "18px"></the-text>
-        <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="700px"></stat-background>
-        <!-- <the-swimming-fish class = "factFish" image = "imgs/blue_fish.png" width = "450px" top = "1670px" left = "40px"></the-swimming-fish> -->
-        <interesting-fact class = "fact" head_text="Why are Coral Reefs Important?" top="1650px" left="25px"></interesting-fact>
+        <the-text class="ana_text6"content = "Click on the coral to see!" color = "#DFB707" top = "50px" font-weight = "bolder" font-size = "20px"></the-text>
+        <img src="imgs/arrow.gif" style="width: 140px; margin: 40px 50px 0px 0px;">
+        <appear-div img = "imgs/deadcoral.png" top = "965px" left = "0px" width="276px" height="280px"></appear-div>
+        <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="530px"></stat-background>
+        <the-floating-fish class="blue_fish_outline" image="imgs/blue_fish_outline.png" top="1915px" left="45px" width="405px" opacity="0%"></the-floating-fish>
+        <interesting-fact class = "fact" head_text="Why are Coral Reefs Important?" top="1900px" left="25px"></interesting-fact>
     </div>
     <div class = "renata_section">
         <the-text class = "textOne" content = "Deep Sea Fish In Danger" color = "#FFFFFF" top = "0px" font-weight = "bold" font-size = "37px"></the-text>
-        <the-text class = "textTwo"content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." alignment = "center" width="450px" top="180px" left="0px"></the-text>
+        <the-text class = "textTwo"content = "Shallow-water fish have complex regulatory mechanisms and good metabolic system." alignment = "center" width="450px" top="200px" left="0px"></the-text>
         <!-- <the-floating-fish image = "imgs/green_jellyfish.png" width = "150px" top = "400px" left = "250px" blendmode="color-dodge"></the-floating-fish> -->
-        <the-swimming-fish class = "bubble" image = "imgs/bubble_fish.png" width = "230px" top = "500px" leftstart="400px" leftend="-200px" blendmode="color-dodge"></the-swimming-fish>
+        <the-swimming-fish class = "bubble" image = "imgs/bubble_fish.png" width = "230px" top = "500px" blendmode="color-dodge"></the-swimming-fish>
         <the-text class = "textThree" content = "However, deep sea fish live in a cold dark environment with very little food available." alignment = "end" width="250px" top="480px" left="90px"></the-text>
         <the-floating-fish class = "jellyfish" image = "imgs/red_jellyfish.png" width = "250px" top = "830px" left = "0px"></the-floating-fish>
         <the-text class = "textFour" content = "So they have metabolic rates 10 times lower than shallow-water fish! " alignment = "end" width="300px" top="700px" left="60px"></the-text>
         <the-text class = "textFive" content = "now click on this fish!" alignment = "end" width="200px" top="770px" color = "skyblue"></the-text>
-        <the-swimming-fish class = "ugly" image = "imgs/light_fishoff.png" width = "450px" top = "1050px" left="10px" blendmode="color-dodge"></the-swimming-fish>
+        <the-swimming-fish class = "ugly" image = "imgs/light_fishoff.png" width = "450px" top = "1200px" left="10px" blendmode="color-dodge"></the-swimming-fish>
         <the-text class = "textSix" content = "They have less energy available for dealing with environmental stress." alignment = "center" width="200px" top="970px" left="60px"></the-text>
         <stat-background bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(255, 19, 19, 0.45)" bg3="rgba(52, 255, 52, 0.45)" head_text="Guess how many years it will take the ocean to fully recover, even if acidification is stopped?" info_text="100" info_text2="10" info_text3="1000+" top="1030px"></stat-background>
         <the-text class = "textSeven" content = "What does it mean?" color = "yellow" top = "1050px" font-weight = "bold" font-size = "31px" width = "300px"></the-text>
-        <the-text class = "textEight" content = "click to find out!" alignment = "center" width="200px" top="1070px" left="-60px" color = "skyblue"></the-text>
-        <the-swimming-fish class = "cute" image = "imgs/ugly_fish.png" width = "200px" top = "1950px" left="70px" blendmode="color-dodge"></the-swimming-fish>
-        <the-swimming-fish class = "snake" image = "imgs/snake_fish.png" width = "600px" top = "1600px" left="700px" leftend="-200px" blendmode="color-dodge"></the-swimming-fish>
-        <the-text class = "textNine" content = "It means that the abundance of deep-sea animals is at risk since ocean acification is reaching the bottom of the sea" alignment = "start" width="300px" top="1150px" left="-70px" opacity = "0%"></the-text>
+        <the-text class = "textEight" content = "click to find out!" alignment = "center" width="200px" top="1040px" left="-60px" color = "skyblue"></the-text>
+        <the-swimming-fish class = "cute" image = "imgs/ugly_fish.png" width = "200px" top = "1920px" left="70px" blendmode="color-dodge"></the-swimming-fish>
+        <the-swimming-fish class = "snake" image = "imgs/snake_fish.png" width = "600px" top = "1630px" left="700px" blendmode="color-dodge"></the-swimming-fish>
+        <the-text class = "textNine" content = "It means that the abundance of deep-sea animals is at risk since ocean acification is reaching the bottom of the sea" alignment = "start" width="300px" top="1100px" left="-70px" opacity = "0%"></the-text>
     </div>
 
 </body>

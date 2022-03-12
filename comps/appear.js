@@ -5,14 +5,13 @@ var template_appear = document.createElement("template"); //<template> </templat
 template_appear.innerHTML = `
 <style>
 .appeardiv{
-    width:340px;
-    height:285px;
+    width:276px;
+    height:280px;
     position: relative;
     background-image: url("imgs/deadcoral.png");
     background-size: cover;
-    opacity:0;
+    opacity:0%;
     left:0px;
-    overflow-x:visible;
     z-index: 1
 
 }
@@ -35,7 +34,7 @@ class TheAppear extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_appear.content.cloneNode(true)); //use the template to make a clone
-        document.querySelector("appear-div").style.position="relative";
+        document.querySelector("appear-div").style.position="absolute";
         document.querySelector("appear-div").style.top = this.getAttribute("top");
         document.querySelector("appear-div").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector(".appeardiv").style.width = this.getAttribute("width");
@@ -44,8 +43,6 @@ class TheAppear extends HTMLElement {
         this.shadowRoot.querySelector(".appeardiv").style.textAlign = this.getAttribute("alignment");
         document.querySelector("appear-div").onclick = () => this.revealImg(
             this.getAttribute("img"),
-            this.getAttribute("left"),
-            this.getAttribute("top")
         )
     }
 

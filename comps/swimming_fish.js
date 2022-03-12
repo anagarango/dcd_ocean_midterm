@@ -31,20 +31,22 @@ class TheSwimFish extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_swimfish.content.cloneNode(true)); //use the template to make a clone
-        document.querySelector("the-swimming-fish").style.position = "absolute";
+        // document.querySelector("the-swimming-fish").style.position = "absolute";
         this.shadowRoot.querySelector("img").src = this.getAttribute("image");
         this.shadowRoot.querySelector("img").style.width = this.getAttribute("width");
         this.shadowRoot.querySelector("img").style.top = this.getAttribute("top");
         this.shadowRoot.querySelector("img").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("img").style.mixBlendMode = this.getAttribute("blendmode");
+        this.shadowRoot.querySelector('img').HandleContScroll = () => this.lefty();
+        this.shadowRoot.querySelector('img').HandleContScroll = () => this.righty()
 
         if (this.getAttribute("class") == "ugly"){
             this.shadowRoot.querySelector("img").onclick = () => {
                 document.querySelector(".ugly").changeImage("./imgs/light_fish.png");}
         } else if (this.getAttribute("class") == "cute"){
             this.shadowRoot.querySelector("img").onclick = () => {
-            document.querySelector(".cute").rightycute();
-            document.querySelector(".snake").rightysnake();
+            document.querySelector(".cute").righty("-180px", "2100px", "0.8s", "0.8s");
+            document.querySelector(".snake").righty("-550px", "1850px", "3s");
             document.querySelector(".textNine").textAppear();
             }
         }
@@ -57,75 +59,76 @@ class TheSwimFish extends HTMLElement {
       }
 
 
-    lefty(){
+    lefty(lefty="0px", toppy="0px", transition="0s"){
+    this.shadowRoot.querySelector('img').style.cssText += `
+        left:${lefty};
+        top: ${toppy};
+        transition:${transition}
+        `
+    }
+    righty(leftyend="200px", toppyend="-200px", transition="0s", delay="0s"){
         this.shadowRoot.querySelector("img").style.cssText += `
-            left:-450px;
-            top: 200px;
-            transition:0s
+            left:${leftyend};
+            top: ${toppyend};
+            transition: ${transition};
+            transition-delay: ${delay};
             `
     }
-    righty(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-            left:250px;
-            top: -100px;
-            transition: 18s
-            `
-    }
+    // rightycute(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //     left:-180px;
+    //     top: 2100px;
+    //     width: 50px;
+    //     transition: 0.8s;
+    //     transition-delay: 0.6s;
+    //     `
+    // }
+    // rightysnake(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //         left:-550px;
+    //         top: 1850px;
+    //         transition: 2s
+    //         `
+    // }
+
+    // rightybubble(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //         left:-200px;
+    //         top: 500px;
+    //         transition: 15s
+    //         `
+    // }
+
+    // leftybubble(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //         left:350px;
+    //         top: 500px;
+    //         transition:0s
+    //         `
+    // }
+
     
-    rightysnake(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-            left:-550px;
-            top: 1850px;
-            transition: 2s
-            `
-    }
 
-    rightybubble(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-            left:-200px;
-            top: 500px;
-            transition: 15s
-            `
-    }
+    // bigfish(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //     left:-550px;
+    //     transition: 3s;
+    //     `
+    // }
 
-    leftybubble(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-            left:350px;
-            top: 500px;
-            transition:0s
-            `
-    }
+    // rightyjelly(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //         left: 100px;
+    //         transition: 10s
+    //         `
+    // }
 
-    rightycute(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-        left:-180px;
-        top: 2100px;
-        width: 50px;
-        transition: 0.8s;
-        transition-delay: 0.6s;
-        `
-    }
-
-    bigfish(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-        left:-550px;
-        transition: 3s;
-        `
-    }
-
-    rightyjelly(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-            left: 100px;
-            transition: 10s
-            `
-    }
-
-    leftyjelly(){
-        this.shadowRoot.querySelector("img").style.cssText += `
-            left: 0px;
-            transition: 0s
-            `
-    }
+    // leftyjelly(){
+    //     this.shadowRoot.querySelector("img").style.cssText += `
+    //         left: 0px;
+    //         transition: 0s
+    //         `
+    // }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }

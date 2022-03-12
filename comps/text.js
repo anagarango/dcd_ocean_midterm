@@ -32,7 +32,6 @@ class TheText extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_text.content.cloneNode(true)); //use the template to make a clone
-        document.querySelector("the-text").style.position = "absolute";
         this.shadowRoot.querySelector("p").style.top = this.getAttribute("top");
         this.shadowRoot.querySelector("p").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("content");
@@ -41,6 +40,7 @@ class TheText extends HTMLElement {
         this.shadowRoot.querySelector("p").style.width = this.getAttribute("width");
         this.shadowRoot.querySelector("p").style.fontWeight = this.getAttribute("font-weight");
         this.shadowRoot.querySelector("p").style.fontSize = this.getAttribute("font-size");
+        this.shadowRoot.querySelector("p").style.marginBottom = this.getAttribute("margin-bottom");
         this.shadowRoot.querySelector("p").style.textAlign = this.getAttribute("alignment");
         document.querySelector("body").onscroll = (e) => this.HandleContScroll(e.target.documentElement.scrollTop)
     }
@@ -57,12 +57,45 @@ class TheText extends HTMLElement {
             transition: 1s
             `
     }
+
+    textAppear(){
+        this.shadowRoot.querySelector("p").style.cssText += `
+        opacity: 100%;
+        transition:4s;
+        transition-delay: 2s;
+        `
+    }
     HandleContScroll(scrollNum=0){
         console.log("scroll", scrollNum);
+        if(scrollNum < 300){
+            document.querySelector(".info_text").opacityOff()
+         } else {
+             document.querySelector(".info_text").opacityOn()
+         }
+         if(scrollNum < 400){
+            document.querySelector(".info_text2").opacityOff()
+         } else {
+             document.querySelector(".info_text2").opacityOn()
+         }
+         if(scrollNum < 500){
+            document.querySelector(".info_text3").opacityOff()
+         } else {
+             document.querySelector(".info_text3").opacityOn()
+         }
+         if(scrollNum < 600){
+            document.querySelector(".info_text4").opacityOff()
+         } else {
+             document.querySelector(".info_text4").opacityOn()
+         }
+         if(scrollNum < 750){
+            document.querySelector(".info_text5").opacityOff()
+         } else {
+             document.querySelector(".info_text5").opacityOn()
+         }
         if(scrollNum < 3000){
-            document.querySelector(".whale_shark").lefty()
+            document.querySelector(".whale_shark").lefty("-320px", "350px")
         } else {
-             document.querySelector(".whale_shark").righty()
+             document.querySelector(".whale_shark").righty("550px", "0px", "20s")
         }
         if(scrollNum < 3750){
             document.querySelector(".ana_subheading").opacityOff()
@@ -142,27 +175,21 @@ class TheText extends HTMLElement {
          }
 
          if(scrollNum < 5900){
-            document.querySelector(".bubble").leftybubble()
+            document.querySelector(".bubble").righty("350px", "500px")
             
         } else {
-            document.querySelector(".bubble").rightybubble()
+            document.querySelector(".bubble").lefty("-200px", "500px", "15s")
         }
 
         if(scrollNum < 6400){
-            document.querySelector(".ugly").leftyjelly()
+            document.querySelector(".ugly").lefty("-100px", "1090px")
             
         } else {
-            document.querySelector(".ugly").rightyjelly()
+            document.querySelector(".ugly").righty("100px", "1090px", "10s")
         }
     }
 
-    textAppear(){
-        this.shadowRoot.querySelector("p").style.cssText += `
-        opacity: 100%;
-        transition:4s;
-        transition-delay: 2s;
-        `
-    }
+    
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
