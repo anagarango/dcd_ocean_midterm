@@ -63,6 +63,7 @@ class InterestingFact extends HTMLElement {
         if (this.getAttribute("class") == "fact"){
             this.shadowRoot.querySelector(".fish_background").onclick = () => {
                 document.querySelector(".fact").bigfact();
+                document.querySelector(".blue_fish_outline").imgAppear();
             }
     }
 }

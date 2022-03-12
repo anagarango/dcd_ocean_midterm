@@ -5,12 +5,13 @@ var template_subhead = document.createElement("template"); //<template> </templa
 template_subhead.innerHTML = `
 <style>
     p{
+        position: relative;
         height: fit-content;
         width: 300px; 
         color: white;
         font-size: 21px;
         font-weight: bold;
-        margin-top: 200px
+        // margin-top: 200px
     }
 </style>
 <p>Hey There</p>
@@ -41,9 +42,9 @@ class SubHead extends HTMLElement {
         this.shadowRoot.querySelector("p").innerText = this.getAttribute("head_text");
         this.shadowRoot.querySelector("p").style.textAlign = this.getAttribute("alignment");
     }
-
-
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
+
     opacityOff(){
         this.shadowRoot.querySelector("p").style.cssText += `
             opacity: 0;

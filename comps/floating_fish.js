@@ -5,6 +5,8 @@ var template_floatfish = document.createElement("template"); //<template> </temp
 template_floatfish.innerHTML = `
 <style>
 div{
+    width: 200px;
+    height:200px;
     position: absolute;
 }
 img{
@@ -42,8 +44,23 @@ class TheFloatingFish extends HTMLElement {
         this.shadowRoot.querySelector("div").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector("div > img").style.width = this.getAttribute("width");
         this.shadowRoot.querySelector("div > img").style.mixBlendMode = this.getAttribute("blendmode");
+        this.shadowRoot.querySelector("div > img").style.opacity = this.getAttribute("opacity");
+
+
+        if (this.getAttribute("class") == "blue_fish_outline"){
+            document.shadowRoot.querySelector("img").onclick = () => {
+            document.querySelector(".blue_fish_outline").imgAppear();
+            }
+        }
     }
 
+    imgAppear(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+        opacity: 100%;
+        transition:2s;
+        transition-delay: 2s;
+        `
+    }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }
 
