@@ -118,7 +118,10 @@ class TheText extends HTMLElement {
              document.querySelector(".ana_text3").opacityOn()
         }
         if(scrollNum < 4000){
-            document.querySelector(".ana_text4").opacityOff()
+            document.querySelector(".ana_text4").opacityOff();
+            document.querySelector(".coral_stat_background").statAnswer(this.getAttribute('bg1'),
+            this.getAttribute('bg2'),
+            this.getAttribute('bg3'))
          } else {
              document.querySelector(".ana_text4").opacityOn()
         }
@@ -182,8 +185,10 @@ class TheText extends HTMLElement {
         }
 
         if(scrollNum < 6400){
-            document.querySelector(".ugly").lefty("-100px", "1090px")
-            
+            document.querySelector(".ugly").lefty("-100px", "1090px");
+            document.querySelector(".recover_stat_background").statAnswer(this.getAttribute('bg1'),
+            this.getAttribute('bg2'),
+            this.getAttribute('bg3'))
         } else {
             document.querySelector(".ugly").righty("100px", "1090px", "10s")
         }
