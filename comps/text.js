@@ -67,47 +67,82 @@ class TheText extends HTMLElement {
     }
     HandleContScroll(scrollNum=0){
         console.log("scroll", scrollNum);
-        if(scrollNum < 300){
+        if(scrollNum < 500){
             document.querySelector(".info_text").opacityOff()
          } else {
              document.querySelector(".info_text").opacityOn()
          }
-         if(scrollNum < 400){
+         if(scrollNum < 650){
             document.querySelector(".info_text2").opacityOff()
          } else {
              document.querySelector(".info_text2").opacityOn()
          }
-         if(scrollNum < 500){
+         if(scrollNum < 750){
             document.querySelector(".info_text3").opacityOff()
          } else {
              document.querySelector(".info_text3").opacityOn()
          }
-         if(scrollNum < 600){
+         if(scrollNum < 800){
             document.querySelector(".info_text4").opacityOff()
          } else {
              document.querySelector(".info_text4").opacityOn()
          }
-         if(scrollNum < 750){
+         if(scrollNum < 950){
             document.querySelector(".info_text5").opacityOff()
          } else {
              document.querySelector(".info_text5").opacityOn()
          }
+         if(scrollNum < 1500){
+            document.querySelector(".elizabeth_subheading").opacityOff()
+         } else {
+             document.querySelector(".elizabeth_subheading").opacityOn()
+         }
+        if(scrollNum < 1650){
+           document.querySelector(".elizabeth_text1").opacityOff()
+        } else {
+            document.querySelector(".elizabeth_text1").opacityOn()
+        }
+        if(scrollNum < 1900){
+            document.querySelector(".elizabeth_text2").opacityOff()
+         } else {
+             document.querySelector(".elizabeth_text2").opacityOn()
+        }
+        if(scrollNum < 2100){
+            document.querySelector(".elizabeth_text3").opacityOff()
+         } else {
+             document.querySelector(".elizabeth_text3").opacityOn()
+        }
+        if(scrollNum < 2250){
+            document.querySelector(".elizabeth_text4").opacityOff()
+         } else {
+             document.querySelector(".elizabeth_text4").opacityOn()
+        }
+
+        // if(scrollNum < 1100){
+        //     document.querySelector(".acidic_ocean_stat_background").opacityOff();
+        //     document.querySelector(".acidic_ocean_stat_background").statAnswer(this.getAttribute('bg3'),
+        //     this.getAttribute('bg2'),
+        //     this.getAttribute('bg1'))
+        //  } else {
+        //      document.querySelector(".acidic_ocean_stat_background").opacityOn()
+        // }
+
         if(scrollNum < 3000){
             document.querySelector(".whale_shark").lefty("-320px", "350px")
         } else {
-             document.querySelector(".whale_shark").righty("550px", "0px", "20s")
+            document.querySelector(".whale_shark").righty("550px", "0px", "20s")
         }
-        if(scrollNum < 3750){
+        if(scrollNum < 3500){
             document.querySelector(".ana_subheading").opacityOff()
          } else {
              document.querySelector(".ana_subheading").opacityOn()
          }
-        if(scrollNum < 3800){
+        if(scrollNum < 3700){
            document.querySelector(".ana_text1").opacityOff()
         } else {
             document.querySelector(".ana_text1").opacityOn()
         }
-        if(scrollNum < 3850){
+        if(scrollNum < 3800){
             document.querySelector(".ana_text2").opacityOff()
          } else {
              document.querySelector(".ana_text2").opacityOn()
@@ -125,59 +160,59 @@ class TheText extends HTMLElement {
          } else {
              document.querySelector(".ana_text4").opacityOn()
         }
-        if(scrollNum < 4150){
+        if(scrollNum < 4100){
             document.querySelector(".ana_text5").opacityOff()
          } else {
              document.querySelector(".ana_text5").opacityOn()
         }
-        if(scrollNum < 4200){
+        if(scrollNum < 4150){
             document.querySelector(".ana_text6").opacityOff()
          } else {
              document.querySelector(".ana_text6").opacityOn()
         }
 
-        if(scrollNum < 5630){
+        if(scrollNum < 5200){
             document.querySelector(".textOne").opacityOff()
          } else {
              document.querySelector(".textOne").opacityOn()
          }
-         if(scrollNum < 5950){
+         if(scrollNum < 5555){
             document.querySelector(".textTwo").opacityOff()
          } else {
              document.querySelector(".textTwo").opacityOn()
          }
-         if(scrollNum < 6300){
+         if(scrollNum < 5900){
             document.querySelector(".textThree").opacityOff()
          } else {
              document.querySelector(".textThree").opacityOn()
          }
-         if(scrollNum < 6630){
+         if(scrollNum < 6200){
             document.querySelector(".textFour").opacityOff()
          } else {
              document.querySelector(".textFour").opacityOn()
          }
-         if(scrollNum < 7020){
+         if(scrollNum < 6400){
             document.querySelector(".textFive").opacityOff()
          } else {
              document.querySelector(".textFive").opacityOn()
          }
-         if(scrollNum < 7100){
+         if(scrollNum < 6600){
             document.querySelector(".textSix").opacityOff()
          } else {
              document.querySelector(".textSix").opacityOn()
          }
-         if(scrollNum < 7400){
+         if(scrollNum < 7000){
             document.querySelector(".textSeven").opacityOff()
          } else {
              document.querySelector(".textSeven").opacityOn()
          }
-         if(scrollNum < 7500){
+         if(scrollNum < 7100){
             document.querySelector(".textEight").opacityOff()
          } else {
              document.querySelector(".textEight").opacityOn()
          }
 
-         if(scrollNum < 5900){
+         if(scrollNum < 5500){
             document.querySelector(".bubble").righty("350px", "500px")
             
         } else {

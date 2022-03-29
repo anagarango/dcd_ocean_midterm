@@ -74,61 +74,61 @@ class TheSwimFish extends HTMLElement {
             transition-delay: ${delay};
             `
     }
-    // rightycute(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //     left:-180px;
-    //     top: 2100px;
-    //     width: 50px;
-    //     transition: 0.8s;
-    //     transition-delay: 0.6s;
-    //     `
-    // }
-    // rightysnake(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //         left:-550px;
-    //         top: 1850px;
-    //         transition: 2s
-    //         `
-    // }
+    rightycute(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+        left:-180px;
+        top: 2100px;
+        width: 50px;
+        transition: 0.8s;
+        transition-delay: 0.6s;
+        `
+    }
+    rightysnake(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-550px;
+            top: 1850px;
+            transition: 2s
+            `
+    }
 
-    // rightybubble(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //         left:-200px;
-    //         top: 500px;
-    //         transition: 15s
-    //         `
-    // }
+    rightybubble(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:-200px;
+            top: 500px;
+            transition: 15s
+            `
+    }
 
-    // leftybubble(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //         left:350px;
-    //         top: 500px;
-    //         transition:0s
-    //         `
-    // }
+    leftybubble(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left:350px;
+            top: 500px;
+            transition:0s
+            `
+    }
 
     
 
-    // bigfish(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //     left:-550px;
-    //     transition: 3s;
-    //     `
-    // }
+    bigfish(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+        left:-550px;
+        transition: 3s;
+        `
+    }
 
-    // rightyjelly(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //         left: 100px;
-    //         transition: 10s
-    //         `
-    // }
+    rightyjelly(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left: 100px;
+            transition: 10s
+            `
+    }
 
-    // leftyjelly(){
-    //     this.shadowRoot.querySelector("img").style.cssText += `
-    //         left: 0px;
-    //         transition: 0s
-    //         `
-    // }
+    leftyjelly(){
+        this.shadowRoot.querySelector("img").style.cssText += `
+            left: 0px;
+            transition: 0s
+            `
+    }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 }

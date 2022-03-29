@@ -12,8 +12,9 @@
             display: flex;
             justify-content: center;
             background-color: black;
+            height:7800px ;
         }
-        .ana_section, .renata_section, .introduction, .information {
+        .ana_section, .renata_section, .introduction, .information, .elizabeth_section {
             display: flex;
             position: relative;
             align-items: center;
@@ -22,42 +23,50 @@
         }
         .ana_section{
             width: 500px;
-            top: 3100px;
-            height: 2100px;
+            top: -120px;
+            height: 2700px;
             padding-top: 320px;
             overflow-x: hidden;
         }
         .background{
             position:absolute;
             z-index: -1;
-            height: 8660px;
+            height: 8000px;
+            margin: 0cm;
         }
         body{
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            margin-top: -450px
+            height: 8370px;
+            margin-top: -450px;
+            /* margin-bottom: -3000px;  */
         }
         .smoke{
             position:relative;
-            top: 22px;
+            top: 245px;
             left: -190px;
             width:315px;
             z-index:-1
         }
         .renata_section {
-            top: 3100px;
-            height: 2160px;
+            top: -85px;
+            height: 3050px;
             overflow-x: hidden;
             overflow-y: hidden;
         }
         .introduction{
-            top: 400px;
+            top: 375px;
             height: 500px;
         }
         .information{
-            top: 700px;
+            top: 930px;
             height: 800px;
+        }
+        .elizabeth_section{
+            top: 20px;
+            height: 4255px;
+            overflow-x: hidden;  
         }
         
     </style>
@@ -73,7 +82,7 @@
 </head>
 <body>
     <div class="introduction">
-        <img src="imgs/background.png" width="500vw" class="background">
+        <img src="imgs/background_2.png" width="500vw" class="background">
         <animated-title top="140px" alignment="center" fontsize="75px" margin-between-letters="-3.5px" color="#5D8ABF" width="360px" zIndex="1s"></animated-title>
         <img src="imgs/smoke.gif" class="smoke" alt="smoke_animation">
     </div>
@@ -84,7 +93,18 @@
         <the-text class="info_text3" content="25%" font-size="45px" width = "350px" font-weight="900" top="40px" color = "#DFB707"></the-text>
         <the-text class="info_text4" content="of carbon dioxide released by human activities that change ocean significant water properties" width = "350px" top="20px" ></the-text>
         <the-text class="info_text5" content="Scroll down to see three major issues of Ocean Acidification." font-weight="bolder"color = "#DFB707" width = "300px" top="60px" weight = "bold" alignment = "center" margin-bottom="70px"></the-text>
-        <img src="imgs/anchor.gif" width="180px" alt="smoke_animation">
+        <img src="imgs/anchor.gif"  width="180px" alt="smoke_animation">
+    </div>
+    <div class= "elizabeth_section">
+        <sub-heading class="elizabeth_subheading" head_text="Disruption To The Food Web " width="200px" alignment="center"  top="1100px"></sub-heading>
+        <the-text class="elizabeth_text1"content = "Ocean acidification is the process of water becoming more acidic as it absorbs carbon dioxide from the atmosphere.
+        Yearly, the ocean absorbs roughly " alignment = "center" width="290px" top="1150px"></the-text>
+        <stat-background class="acidic_ocean_stat_background" bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(255, 19, 19, 0.45)" bg3="rgba(52, 255, 52, 0.45)" head_text="Guess approximately how much more acidic is the ocean now ? " info_text="5%" info_text2="15%" info_text3="30%" top="1200px"></stat-background>
+        <the-text class="elizabeth_text2" content = "This has an effect on many ecosystems because it causes redutions in population of small animals, like oysters, clams, and sea urchins. " alignment = "center" width="340px" top="1250px" ></the-text>
+        <the-text class="elizabeth_text3"content = "This can effect animals that you  know  like fish the rely on those smaller creatures as their food source." alignment = "center" width="340px" top="1300px" ></the-text>
+        <the-text class="elizabeth_text4"content = "Because there are less small creature there is a big complex ripple effect on the food web " alignment = "center" width="340px" top="1350px" ></the-text>
+        <the-floating-fish class="fish_outline" image="imgs/fish_outline.png" top="2550px" left="25px" width="405px" opacity="0%"></the-floating-fish>
+        <interesting-fact class = "foodweb_fact" head_text="What is the food web?" top="2550px" left="25px" image ="imgs/sheephead_fish.png"></interesting-fact >
     </div>
     <div class="ana_section">
         <the-swimming-fish class = "whale_shark" image = "imgs/whale_shark.png" width = "350px" blendmode="soft-light"></the-swimming-fish>
@@ -96,10 +116,10 @@
         <the-text class="ana_text5"content = "But what does this bleaching look like?" width = "320px" top = "80px"></the-text>
         <the-text class="ana_text6"content = "Click on the coral to see!" color = "#DFB707" top = "50px" font-weight = "bolder" font-size = "20px"></the-text>
         <img src="imgs/arrow.gif" style="width: 140px; margin: 40px 50px 0px 0px;">
-        <appear-div img = "imgs/deadcoral.png" top = "965px" left = "0px" width="276px" height="280px"></appear-div>
+        <appear-div img = "imgs/deadcoral.png" top = "985px" left = "10px" width="260px" height="270px"></appear-div>
         <stat-background class="coral_stat_background" bg1="rgba(255, 19, 19, 0.45)" bg2="rgba(52, 255, 52, 0.45)" bg3="rgba(255, 19, 19, 0.45)" head_text="What percent of the world’s coral reefs are damaged because of coral bleaching (and other factors)?" info_text="40%" info_text2="70%" info_text3="80%" top="530px"></stat-background>
         <the-floating-fish class="blue_fish_outline" image="imgs/blue_fish_outline.png" top="1915px" left="45px" width="405px" opacity="0%"></the-floating-fish>
-        <interesting-fact class = "fact" head_text="Why are Coral Reefs Important?" top="1900px" left="25px"></interesting-fact>
+        <interesting-fact class = "coral_fact" head_text="Why are Coral Reefs Important?" top="1900px" left="25px"></interesting-fact>
     </div>
     <div class = "renata_section">
         <the-text class = "textOne" content = "Deep Sea Fish In Danger" color = "#FFFFFF" top = "0px" font-weight = "bold" font-size = "37px"></the-text>

@@ -60,9 +60,15 @@ class InterestingFact extends HTMLElement {
         this.shadowRoot.querySelector(".fish_background").style.left = this.getAttribute("left");
         this.shadowRoot.querySelector(".head_text").innerText = this.getAttribute("head_text");
 
-        if (this.getAttribute("class") == "fact"){
+        if (this.getAttribute("class") == "foodweb_fact"){
             this.shadowRoot.querySelector(".fish_background").onclick = () => {
-                document.querySelector(".fact").bigfact();
+                document.querySelector(".foodweb_fact").bigfact();
+                document.querySelector(".fish_outline").imgAppear();
+            }
+        }
+        if (this.getAttribute("class") == "coral_fact"){
+            this.shadowRoot.querySelector(".fish_background").onclick = () => {
+                document.querySelector(".coral_fact").bigfact();
                 document.querySelector(".blue_fish_outline").imgAppear();
             }
     }
