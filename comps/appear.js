@@ -5,8 +5,8 @@ var template_appear = document.createElement("template"); //<template> </templat
 template_appear.innerHTML = `
 <style>
 .appeardiv{
-    width:276px;
-    height:280px;
+    width:260px;
+    height:270px;
     position: relative;
     background-image: url("imgs/deadcoral.png");
     background-size: cover;
